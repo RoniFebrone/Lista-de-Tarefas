@@ -64,3 +64,35 @@
         line-height: normal;
     }
 }
+
+@media screen and (max-width: 780px) {
+    .Header{
+        
+        &__Nav{
+            font-size: 23px;
+            padding: 0;
+            width: 100%;
+
+            ul {
+                width: 100%;
+                justify-content: center;
+                
+            }
+            li{
+                padding:0 ;
+                width: 50%;
+                text-align: center;
+                line-height: 40px;
+                height: 40px;
+            }
+        }
+        &__section {   
+            margin-top: 5%;
+            
+            
+            font-size: 23px;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+    }
