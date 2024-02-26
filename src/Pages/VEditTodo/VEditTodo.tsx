@@ -1,4 +1,3 @@
-import React from 'react'
 import './index.scss'
 import ViewEdit from '../../Components/EditTodo/ViewEdit/ViewEdit'
 

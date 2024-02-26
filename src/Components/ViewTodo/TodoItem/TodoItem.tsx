@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsInfoCircleFill, BsCheck2Square } from "react-icons/bs";
 import { FaRegSquare } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
-import { updateTask } from "../../../../api"; 
+import { updateTask } from "../../../api"; 
 
 import './index.scss';
 
-const TodoItem = ({ id, title, description, completed }) => {
+export interface TaskType {
+    id: string;
+    title: string;
+    description: string;
+    completed: boolean;
+}
+
+const TodoItem = ({ id, title, description, completed }: TaskType ) => {
     const navigate = useNavigate();
     const [isChecked, setIsChecked] = useState(completed);
 

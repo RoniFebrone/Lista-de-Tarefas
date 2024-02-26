@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getTask, updateTask } from '../../../../api';
+import { getTask, updateTask } from '../../../api';
 
-import {BsCheck2Square } from "react-icons/bs";
+import { BsCheck2Square } from "react-icons/bs";
 import { FaRegSquare } from "react-icons/fa";
 
 import './index.scss';
 
 const ViewEdit = () => {
-    const { id } = useParams();
+    const { id } = useParams<{ id: string }>();
     const [task, setTask] = useState({
         title: '',
         description: '',
@@ -20,6 +20,7 @@ const ViewEdit = () => {
 
     useEffect(() => {
         const fetchTask = async () => {
+            if (!id) return;
             try {
                 const taskData = await getTask(id);
                 setTask(taskData);
@@ -32,23 +33,23 @@ const ViewEdit = () => {
         fetchTask();
     }, [id]);
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setTask((prevTask) => ({ ...prevTask, [name]: value }));
     };
 
     const handleToggleCompletion = () => {
         const updatedIsCompleted = !isCompleted;
-        setIsCompleted(updatedIsCompleted);  
+        setIsCompleted(updatedIsCompleted);
         setTask((prevTask) => ({ ...prevTask, completed: updatedIsCompleted }));
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        if (!id) return;
 
         try {
             await updateTask(id, task);
-            // Navegar para a página principal
             navigate(`/`);
         } catch (error) {
             console.error('Erro ao atualizar a tarefa:', error);
@@ -59,7 +60,7 @@ const ViewEdit = () => {
         <div className='TaskEdit'>
             <h1>Editar Tarefa</h1>
             <div className="TaskEdit__form">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className='form__input'>
                         <label>
                             Título:
@@ -88,13 +89,13 @@ const ViewEdit = () => {
                             <label>
                                 Concluído:
                             </label>
-                            
+
                             <div className='TaskEdit__icon--checkbox' onClick={handleToggleCompletion}>
-                            {isCompleted ? <BsCheck2Square /> : <FaRegSquare />}
+                                {isCompleted ? <BsCheck2Square /> : <FaRegSquare />}
                             </div>
                         </div>
                         <div className='TaskEdit__BTsave'>
-                            <button onClick={handleSubmit}>Salvar</button>
+                            <button type="submit">Salvar</button>
                         </div>
                     </div>
                 </form>
