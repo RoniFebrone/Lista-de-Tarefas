@@ -1,22 +1,20 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getTask } from '../../api';
+import { getTask} from '../../../api';
+
+
+
+import './index.scss'
 import ConfirmEdit from './ConfirmEdit/ConfirmEdit';
 
-import './index.scss';
-
-interface TaskDataType {
-    title: string;
-    description: string;
-}
-
 const EditTodo = () => {
-    const { id } = useParams<{ id: string }>();
-    const [taskData, setTaskData] = useState<TaskDataType | null>(null);
+
+
+    const { id } = useParams();
+    const [taskData, setTaskData] = useState(null);
 
     useEffect(() => {
         const fetchTask = async () => {
-            if (!id) return;
             try {
                 const taskInfo = await getTask(id);
                 setTaskData(taskInfo);
@@ -26,7 +24,9 @@ const EditTodo = () => {
         };
 
         fetchTask();
-    }, [id]); 
+    }, [id]); // O efeito será reexecutado sempre que o ID mudar
+
+
 
     return (
         <div className='EditTodo'>
@@ -40,7 +40,8 @@ const EditTodo = () => {
                 ) : (
                     <p>Nenhuma tarefa encontrada</p>
                 )}
-                {id && <ConfirmEdit id={id} />}
+
+                    <ConfirmEdit id={id}/>       
             </div>
         </div>
     );

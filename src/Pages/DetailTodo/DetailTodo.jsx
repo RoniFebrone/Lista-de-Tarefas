@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { getTask } from "../../api";
+import { getTask } from "../../../api";
 import GoBackBt from "../../Components/Navgation/Buttons/GoBackBt";
 import TodoDetail from "./TodoDetail/TodoDetail";
 
@@ -10,17 +10,12 @@ import { FaRegSquare } from "react-icons/fa";
 
 import './index.scss';
 
-interface TaskDataType {
-    title: string,
-    description: string,
-    completed:boolean,
 
-}
+import './index.scss';
 
 const DetailTodo = () => {
     const { id } = useParams();
-    const [task, setTask] = useState<TaskDataType | null>(null)
-    
+    const [task, setTask] = useState({});
 
     useEffect(() => {
         const fetchTask = async () => {
@@ -38,7 +33,7 @@ const DetailTodo = () => {
     }, [id]);
 
     const renderCompletionIcon = () => {
-        if (task?.completed) {
+        if (task.completed) {
             return <BsCheck2Square size={23} className="completed-icon" />;
         } else {
             return <FaRegSquare size={23} className="not-completed-icon" />;
@@ -51,28 +46,23 @@ const DetailTodo = () => {
                 <GoBackBt />
             </div>
             <div className="DetailTodo__details">
-                
-            {task && ( // Verifica se task não é nulo antes de renderizar os detalhes
-                    <>
-                        <TodoDetail
-                            label="Título"
-                            value={task.title || ""}
-                            type="text"
-                        />
+                <TodoDetail
+                    label="Título"
+                    value={task.title || ""}
+                    type="text"
+                />
 
-                        <TodoDetail
-                            label="Descrição"
-                            value={task.description || ""}
-                            type="text"
-                        />
+                <TodoDetail
+                    label="Descrição"
+                    value={task.description || ""}
+                    type="text"
+                />
 
-                        <TodoDetail
-                            label="Concluído"
-                            value={renderCompletionIcon()}
-                            type="custom"
-                        />
-                    </>
-                )}
+                <TodoDetail
+                    label="Concluído"
+                    value={renderCompletionIcon()}
+                    type="custom"
+                />
             </div>
         </div>
     );

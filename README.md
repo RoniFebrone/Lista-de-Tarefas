@@ -24,9 +24,8 @@ Ela funciona web pelo site, pois, coloquei o JSON server hospedado na Heroku.
 
 <h4>Tecnologias 🚀</h4>
 
-- TypeScript
-- React JS
 - Javascript
+- React JS
 - Vite
 - React Router Dom
 - Sass

@@ -1,10 +1,10 @@
 import './index.scss';
-import { getTasks } from '../../api';
-import { useState, useEffect } from 'react';
-import TodoItem, {TaskType} from './TodoItem/TodoItem';
+import { getTasks } from '../../../api';
+import React, { useState, useEffect } from 'react';
+import TodoItem from './TodoItem/TodoItem';
 
 const ViewTodo = () => {
-    const [tasks, setTasks] = useState<TaskType[]>([]);
+    const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {

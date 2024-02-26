@@ -1,11 +1,8 @@
+import React from 'react';
 import './index.scss';
 import { useNavigate } from 'react-router-dom';
 
-interface ConfirmEditProps {
-    id: string;
-}
-
-const ConfirmEdit: React.FC<ConfirmEditProps> = ({ id }) => {
+const ConfirmEdit = ({ id }) => {
     const navigate = useNavigate();
 
     const goToHomePage = () => {

@@ -1,26 +1,23 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getTask } from '../../api'
+import { getTask} from '../../../api';
+
+
+
+import './index.scss'
 import ConfirmDelete from './ConfirmDelete/ConfirmDelete';
 
-import './index.scss';
+const DeleteTodo = () => {
 
-interface TaskData {
-    title: string;
-    description: string;
-}
 
-const DeleteTodo: React.FC = () => {
-    const { id } = useParams<{ id: string }>();
-    const [taskData, setTaskData] = useState<TaskData | null>(null);
+    const { id } = useParams();
+    const [taskData, setTaskData] = useState(null);
 
     useEffect(() => {
         const fetchTask = async () => {
             try {
-                if (id) { // Verifica se id não é undefined
-                    const taskInfo = await getTask(id);
-                    setTaskData(taskInfo);
-                }
+                const taskInfo = await getTask(id);
+                setTaskData(taskInfo);
             } catch (error) {
                 console.error('Erro ao buscar tarefa:', error);
             }
@@ -28,6 +25,8 @@ const DeleteTodo: React.FC = () => {
 
         fetchTask();
     }, [id]);
+
+
 
     return (
         <div className='DeleteTodo'>
@@ -41,10 +40,13 @@ const DeleteTodo: React.FC = () => {
                 ) : (
                     <p>Nenhuma tarefa encontrada</p>
                 )}
-                <ConfirmDelete id={id} title={taskData?.title || ''} description={taskData?.description || ''} />
+
+                    <ConfirmDelete id={id}/>       
             </div>
         </div>
     );
 };
 
 export default DeleteTodo;
+
+
