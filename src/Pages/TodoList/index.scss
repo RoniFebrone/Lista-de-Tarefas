@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+
+    height: auto;
+}
+
+.TodoList {
+    display: flex;
+    justify-content: center;
+
+
+    margin-top: 2%;
+    height: auto;
+    width: 50%;
+
+
+    &__Components {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        gap: 10px;
+    }
+
+    &__Link {
+        display: flex;
+        margin-left: 5%;
+
+
+        text-align: center;
+        font-family: Raleway;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+
+    &__Link--a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 95%;
+
+        a {
+            text-decoration: none;
+            color: #FFF;
+            font-family: Raleway;
+            font-size: 25px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+    }
+}

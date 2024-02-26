@@ -1,0 +1,106 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5%;
+    width: 100%;
+    height: auto;
+
+    gap: 20px;
+
+    form {
+
+        width: 45%;
+        color: #FFF;
+        font-family: Raleway;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+
+
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        margin-bottom: 6%;
+
+
+
+        input {
+            background-color: transparent;
+            padding: 1%;
+            margin-top: 1.5%;
+
+            outline: none;
+
+            border: 0;
+            border-bottom: solid 1px;
+
+            font-family: Raleway;
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+    }
+
+    &__textarea {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        textarea {
+            background-color: transparent;
+            padding: 1%;
+            margin-top: 1.5%;
+
+            outline: none;
+
+            border: 0;
+            border-bottom: solid 1px;
+
+            overflow: auto;
+
+            border: 0;
+            border-bottom: solid 1px;
+            font-family: Raleway;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    &__BTsubmit {
+        display: flex;
+        justify-content: center;
+        margin-top: 7%;
+
+        button {
+            background-color: transparent;
+            border: solid 1px;
+            width: 40%;
+            padding: 2%;
+            cursor: pointer;
+
+
+            color: #FFF;
+            font-family: Raleway;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transition: 0.3s;
+            &:hover,
+            &:focus {
+                box-shadow: 0 1em 1em -0.4em #6d6b6bfd ;
+                transform: translateY(-0.25em);
+                transition: 0.3s;
+
+        }
+    }
+}
+}

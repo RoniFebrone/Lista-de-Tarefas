@@ -1,0 +1,49 @@
+.TodoDetail {
+    display: flex;
+    align-items: center;
+    width: auto;
+
+
+    label {
+        
+
+        font-weight: 600;
+        margin-top: 1rem;
+
+        color: #FFF;
+        font-family: Raleway;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+
+    input {
+
+        width: 100%;
+
+        background: transparent;
+        border: none;
+        margin-left: 1rem;
+        margin-top: 1rem;
+
+        color: #FFF;
+        font-family: Raleway;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    .custom-icon-container {
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+    }
+}

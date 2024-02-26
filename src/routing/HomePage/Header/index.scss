@@ -1,0 +1,66 @@
+.Header {
+    display: flex;
+    flex-direction: column;
+
+    &__Nav {
+        display: flex;
+        background-color: #0C70F2;
+        align-items: flex-end;
+        
+        padding-left:3% ;
+        
+        height: 90px;
+
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            list-style: none;
+            background-color: #0C70F2;
+
+            align-items: center;
+        }
+        li{
+
+            padding: 4% 15% 2% 15% ;
+            background-color: #0C70F2;
+            
+
+            align-items: center;
+        }
+
+
+        #task{
+            background-color: #FFF;
+            color: #0C70F2;
+
+            border-radius: 10px 10px 0px 0px;
+
+            cursor: pointer;
+        }
+    }
+
+
+    &__section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        margin-top: 5%;
+
+
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}

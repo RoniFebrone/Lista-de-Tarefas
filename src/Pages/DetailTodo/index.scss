@@ -1,0 +1,41 @@
+.DetailTodo {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+    margin-top: 5%;
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+
+        width: 50%;
+        margin-left: 5%;
+
+        gap: 15px;
+        height: auto;
+    }
+
+    &__btn{
+        margin-right: 60%;
+    }
+
+
+        @media (max-width: 1000px) {
+            left: 5%;
+        }
+    }
+    .completed-icon{
+        display: flex;
+    }
+    .not-completed-icon{
+        display: flex;
+    }
+
+
+
+
+

@@ -1,0 +1,22 @@
+{
+  "tasksBD": [
+    {
+      "id": "1",
+      "title": "Exercicios",
+      "description": "Ir para academia fazer exercicios",
+      "completed": true
+    },
+    {
+      "title": "Limpar o carro",
+      "description": "Limpar o carro inteiro, de dentro pra fora",
+      "completed": false,
+      "id": "2"
+    },
+    {
+      "title": "Banho e tosaaaaaaaa",
+      "description": "Levar o cachorro ao pet shop",
+      "completed": true,
+      "id": "3"
+    }
+  ]
+} 

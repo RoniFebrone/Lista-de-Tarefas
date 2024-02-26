@@ -1,0 +1,18 @@
+.TodoItem{
+
+    overflow: hidden;
+
+    &__BtIcon{
+        margin-left: 15px;
+        border: 0;
+
+        cursor: pointer;
+    }
+    
+
+    input{
+        display: none;
+    }
+
+}   
+
