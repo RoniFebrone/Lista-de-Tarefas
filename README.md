@@ -3,7 +3,7 @@
 	<br>
 	<p align="center">
 		<a href="https://www.linkedin.com/in/roni-febrone-97b007275/">
-		  <img alt="made by" src="https://img.shields.io/badge/made%20by-Roni%20Febrone-orange">
+		  <img alt="made by" src="https://img.shields.io/badge/made%20by-Roni%20Febrone-blue">
 		</a>
 	</p>
 </div>
