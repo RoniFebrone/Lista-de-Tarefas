@@ -1,7 +1,15 @@
-import React from 'react'
+import { ReactNode } from 'react'
 import './index.scss';
 
-const TodoDetail = ({ label, value, type, onChange }) => {
+
+export interface TaskDetailType {
+    label: string;
+    value: ReactNode;
+    type: string;
+    onChange?: () => void;
+}
+
+const TodoDetail = ({ label, value, type, } : TaskDetailType) => {
     const id = `input${label}`;
 
     return (
@@ -10,7 +18,7 @@ const TodoDetail = ({ label, value, type, onChange }) => {
             {type === "custom" ? (
                 <div className="custom-icon-container">{value}</div>
             ) : (
-                <input type={type} id={id} value={value} readOnly />
+                <input type={type} id={id} value={value as string}  readOnly />
             )}
         </div>
     );

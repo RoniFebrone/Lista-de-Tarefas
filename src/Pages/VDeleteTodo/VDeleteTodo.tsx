@@ -1,4 +1,3 @@
-import React from 'react'
 import DeleteTodo from '../../Components/DeleteTodo/DeleteTodo'
 import './index.scss'
 
