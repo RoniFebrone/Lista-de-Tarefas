@@ -1,25 +1,23 @@
-import React from 'react'
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import { createTask } from '../../../api';
+import { createTask } from '../../api.ts'
 
 import './index.scss'
 
 const CreateTodo = () => {
-
     const navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
 
-    const handleTitleChange = (e) => {
+    const handleTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.target.value);
     };
 
-    const handleDescriptionChange = (e) => {
+    const handleDescriptionChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setDescription(e.target.value);
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         // Cria tarefa
@@ -32,7 +30,6 @@ const CreateTodo = () => {
         await createTask(newTask);
         navigate("/");
     };
-
 
     return (
         <div className="form">
@@ -59,13 +56,11 @@ const CreateTodo = () => {
                 </div>
 
                 <div className="form__BTsubmit">
-                    <button type="submit">Criar Tarefa</button>                
+                    <button type="submit">Criar Tarefa</button>
                 </div>
             </form>
         </div>
     );
 }
 
-export default CreateTodo
-
-
+export default CreateTodo;
