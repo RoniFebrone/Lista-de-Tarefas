@@ -23,7 +23,7 @@ const TodoList = () => {
                                 Criar nova tarefa
                             </Link>
 
-                            <Link to="/create-todo">
+                            <Link to="/create-todo" className='custonIconA'>
                                 <IoAddOutline size={30} />
                             </Link>
 
