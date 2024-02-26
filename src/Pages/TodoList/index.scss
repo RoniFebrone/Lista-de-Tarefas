@@ -1,3 +1,5 @@
+TodoList index
+
 .container {
     display: flex;
     justify-content: center;
@@ -55,5 +57,67 @@
             line-height: normal;
         }
 
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .TodoList {
+        &__Link {
+            justify-content: center;
+        }
+
+        &__Link--a {
+            justify-content: center;
+
+            svg {
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .TodoList {
+
+        width: 65%;
+
+        &__Link {
+            justify-content: center;
+        }
+
+        &__Link--a {
+            justify-content: center;
+
+            svg {
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .TodoList {
+
+        width: 75%;
+
+        &__Link {
+            justify-content: center;
+        }
+
+        &__Link--a {
+            justify-content: center;
+
+            .custonIconA {
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    margin-top: 7px;
+                    margin-left: 2px;
+                }
+            }
+        }
     }
 }
