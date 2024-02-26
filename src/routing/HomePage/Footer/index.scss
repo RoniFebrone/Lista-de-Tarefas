@@ -11,7 +11,7 @@
     bottom: 0;
     width: 100%;
 
-
+    font-family: Poppins;
     a {
         color: aliceblue !important;
     }
@@ -25,12 +25,9 @@
 
 
 /* Estilos adicionais para telas médias (exemplo: tablets em orientação retrato) */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .footer {
         flex-direction: row;
-        margin: 7% 5% 5% 5%;
-
-
         font-family: Poppins;
         font-size: 42px;
         font-weight: 600;
@@ -38,7 +35,7 @@
 
     }
     .footer p{
-        text-align: left;
+        text-align: center;
     }
     
 }
