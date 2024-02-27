@@ -1,32 +1,32 @@
 <div align="center">
-	<h1>Listagem de tarefas</h1>
+	<h1>Listagem de Tarefas</h1>
 	<br>
 	<p align="center">
 		<a href="https://www.linkedin.com/in/roni-febrone-97b007275/">
-		  <img alt="made by" src="https://img.shields.io/badge/made%20by-Roni%20Febrone-blue">
+		  <img alt="Feito por" src="https://img.shields.io/badge/feito%20por-Roni%20Febrone-blue">
 		</a>
 	</p>
 </div>
 
 <hr>
 
-<h3> Acesse ao sistema web: https://todo-list-five-henna.vercel.app </h3> 
+<h3> Acesse o sistema web: https://todo-list-five-henna.vercel.app </h3> 
 
  
 
 <h4>Descrição 📄</h4>
 
-Aplicação desenvolvida para listar e visualizar tarefas, com o objetivo de colocar em práticas a biblioteca de desenvolvimento de interfaces React JS.
+Esta aplicação foi desenvolvida para listar e visualizar tarefas, com o objetivo de colocar em prática a biblioteca de desenvolvimento de interfaces React JS.
 
-Ela funciona web pelo site, pois, coloquei o JSON server hospedado na Heroku.
+Ela funciona como um aplicativo web, acessível através do site mencionado acima.
 
 <hr>
 
-<h4>Tecnologias 🚀</h4>
+<h4>Tecnologias Utilizadas 🚀</h4>
 
 - TypeScript
 - React JS
-- Javascript
+- JavaScript
 - Vite
 - React Router Dom
 - Sass
@@ -34,9 +34,10 @@ Ela funciona web pelo site, pois, coloquei o JSON server hospedado na Heroku.
 
 <hr>
 
-<h4>Como rodar no seu computador🖥️</h4>
+<h4>Como Executar Localmente 🖥️</h4>
 
-- Instale o [Node.js](https://nodejs.org/en/download/) e o [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). Então:
+- Certifique-se de ter o [Node.js](https://nodejs.org/en/download/) e o [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) instalados em sua máquina. Em seguida:
+
 
 ```
 # clone esse repositório
@@ -54,7 +55,8 @@ $ npm run server
 # abra outro terminal e rode o projeto
 $ npm run dev
 ```
-- [Acesse a aplicação](http://localhost:5173)
+
+A aplicação estará disponível em: http://localhost:5173
 
 <hr>
 
